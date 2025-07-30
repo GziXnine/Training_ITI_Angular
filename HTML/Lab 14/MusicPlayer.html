@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Demo & Music Player</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="music-player-container">
+    <div class="music-player">
+      <div class="header">
+        <span class="time">12:00</span>
+
+        <div class="signal-icons">
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-battery-half"></i>
+        </div>
+      </div>
+
+      <div class="top-nav">
+        <i class="fas fa-arrow-left"></i>
+        <span>Music Player</span>
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
+
+      <div class="album-art">
+        <i class="fas fa-music"></i>
+      </div>
+
+      <div class="progress-bar-container">
+        <input type="range" min="0" max="100" value="20" class="progress-bar" id="musicProgressBar">
+
+        <div class="time-info">
+          <span class="current-time">00:36</span>
+          <span class="total-time">03:15</span>
+        </div>
+      </div>
+
+      <div class="song-details">
+        <h3 class="song-name">Song Name</h3>
+        <p class="artist-name">Lorem ipsum</p>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button class="control-btn play-pause-btn">
+          <i class="fas fa-play"></i>
+        </button>
+        <button class="control-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+
+      <div class="additional-info">
+        <p>Lorem ipsum</p>
+      </div>
+      <div class="volume-bar-container">
+        <input type="range" min="0" max="100" value="70" class="volume-bar" id="volumeBar">
+      </div>
+
+      <div class="bar"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 08</title>
+
+  <style>
+    #spinner {
+      display: none;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--! 1. Task: Fetch and display a post -->
+  <button onclick="postOne()">Show Post</button>
+  <div id="p1"></div>
+  <br>
+
+  <!--! 2. Task: Fetch and display all users -->
+  <button onclick="showUsers()">Show Users</button>
+  <ul id="uList"></ul>
+  <br>
+
+  <!--! 3. Task: Fetch and display local JSON data -->
+  <button onclick="getLocalCourses()">Show Local Courses</button>
+  <div id="ld"></div>
+  <br>
+
+  <!--! 4. Task: Send form data to a server -->
+  <form onsubmit="sendForm(event)">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <button type="submit">Send</button>
+  </form>
+  <div id="res"></div>
+  <br>
+
+  <!--! 5. Task: Load data with a spinner -->
+  <button onclick="loadStuff()">Get Info</button>
+  <div id="spin">Loading...</div>
+  <div id="info"></div>
+  <br>
+
+  <!--! 6. Task: Handle bad URL -->
+  <button onclick="loadInvalidURL()">Load Invalid URL</button>
+  <div id="errorBox"></div>
+  <br>
+
+  <!--! 7. Task: Load names into a dropdown -->
+  <select id="dd">
+    <option disabled selected>Pick User</option>
+  </select>
+  <button onclick="loadNames()">Get Names</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

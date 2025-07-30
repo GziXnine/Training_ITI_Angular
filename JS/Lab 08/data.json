@@ -1,0 +1,18 @@
+{
+  "courses": [
+    {
+      "course": "JavaScript Basics",
+      "duration": "4 weeks",
+      "instructor": "Ahmed Allam",
+      "level": "Beginner",
+      "students": 120
+    },
+    {
+      "course": "Advanced JavaScript",
+      "duration": "6 weeks",
+      "instructor": "Sara Mahmoud",
+      "level": "Advanced",
+      "students": 85
+    }
+  ]
+}

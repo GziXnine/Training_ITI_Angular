@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar-dark {
+      background-color: #0d6efd;
+    }
+
+    table,
+    table th,
+    table td {
+      border: 1px solid rgba(48, 48, 48, 0.171);
+    }
+
+    thead tr th {
+      background-color: #0d6dfd2f !important;
+    }
+
+    .product-card {
+      border: 1px solid #dee2e6;
+      border-radius: 0.375rem;
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      background-color: #fff;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    .product-card .btn {
+      width: 80%;
+    }
+
+    .product-list-container {
+      padding-top: 20px;
+    }
+
+    .table img {
+      max-width: 150px;
+      height: auto;
+      border: 1px solid #dee2e6;
+    }
+
+    .table-striped>tbody>tr:nth-of-type(odd)>* {
+      --bs-table-bg-type: white;
+    }
+
+    .feature .btn {
+      width: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">ProductDash</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOrders" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Orders
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownOrders">
+              <li><a class="dropdown-item" href="#">View Orders</a></li>
+              <li><a class="dropdown-item" href="#">Pending Orders</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFilter" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Filter
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownFilter">
+              <li><a class="dropdown-item" href="#">Category</a></li>
+              <li><a class="dropdown-item" href="#">Price Range</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn btn-light" type="submit">Login</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container product-list-container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      Product added successfully!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div class="d-flex mb-3">
+      <button class="btn btn-primary me-2">Add New Product</button>
+
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+        <label class="btn btn-outline-secondary" for="btnradio1">Edit Selected</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-secondary" for="btnradio3">Delete Selected</label>
+      </div>
+    </div>
+
+    <h3>Product List</h3>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover align-middle">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Price ($)</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">1</td>
+            <td><img src="https://placehold.co/200/F0F/FFF" alt=""></td>
+            <td>Wireless Mouse</td>
+            <td>Accessories</td>
+            <td>25.99</td>
+            <td>120</td>
+            <td>
+              <button class="btn btn-info btn-sm me-1 text-black">View</button>
+              <button class="btn btn-warning btn-sm me-1 text-black">Edit</button>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td scope="row">2</td>
+            <td><img src="https://placehold.co/200x220/0FF/000" alt=""></td>
+            <td>Bluetooth Speaker</td>
+            <td>Audio</td>
+            <td>45.00</td>
+            <td>60</td>
+            <td>
+              <button class="btn btn-info btn-sm me-1 text-black">View</button>
+              <button class="btn btn-warning btn-sm me-1 text-black">Edit</button>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td scope="row">3</td>
+            <td><img src="https://placehold.co/200x100/FF/000" alt=""></td>
+            <td>Gaming Keyboard</td>
+            <td>Accessories</td>
+            <td>70.00</td>
+            <td>30</td>
+            <td>
+              <button class="btn btn-info btn-sm me-1 text-black">View</button>
+              <button class="btn btn-warning btn-sm me-1 text-black">Edit</button>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="container feature mt-5">
+    <h2 class="mb-4">Featured Products</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="product-card text-start">
+          <img src="https://placehold.co/400/FF5733/FFFFFF" alt="Noise Cancelling Headphones">
+          <h4 class="mt-2 fs-5">Noise Cancelling Headphones</h4>
+          <p class="fs-6">Experience crystal clear sound with top noise cancelling technology.</p>
+          <button class="btn btn-primary btn-sm">Buy Now</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-card text-start">
+          <img src="https://placehold.co/400/33FF57/000000" alt="Smart Watch">
+          <h4 class="mt-2 fs-5">Smart Watch</h4>
+          <p class="fs-6">Track your fitness and stay connected with our latest smartwatch.</p>
+          <button class="btn btn-success btn-sm">Buy Now</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="product-card text-start">
+          <img src="https://placehold.co/400/3357FF/FFFFFF" alt="Portable SSD">
+          <h4 class="mt-2 fs-5">Portable SSD</h4>
+          <p class="fs-6">Fast, reliable, and portable storage for all your important files.</p>
+          <button class="btn btn-warning  btn-sm text-black">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

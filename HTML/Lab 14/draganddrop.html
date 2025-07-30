@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            width: 400px;
+            height: 400px;
+            border: solid 1px black;
+            margin: 20px;
+            float: left;
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #right {
+            margin-left: 100px;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('load', function () {
+            left = this.document.getElementById('left');
+            right = this.document.getElementById('right');
+            allimgs = this.document.getElementsByTagName('img');
+            for (var i = 0; i < allimgs.length; i++) {
+                allimgs[i].addEventListener('dragstart', startdrag);
+                allimgs[i].addEventListener('dragend', enddrag);
+            }
+            right.addEventListener('dragleave', leavedrag);
+            left.addEventListener('dragenter', enterdrag);
+            left.addEventListener('dragover', overdrag);
+            left.addEventListener('drop', drop);
+        });
+        function startdrag(e) {
+            e.dataTransfer.setData("myimg", e.target.outerHTML);
+            console.log(e.target.outerHTML);
+        }
+        function enddrag(e) {
+            e.preventDefault();
+            e.target.style.display = "none";
+        }
+        function drop(e) {
+            e.preventDefault();
+            left.innerHTML += e.dataTransfer.getData("myimg");
+        }
+        function overdrag(e) {
+            e.preventDefault();
+        }
+        function leavedrag(e) {
+            e.preventDefault();
+        }
+        function enterdrag(e) {
+            e.preventDefault();
+            left.style.backgroundColor = "lightyellow";
+        }
+
+    </script>
+</head>
+
+<body>
+    <section id="left">
+
+    </section>
+    <section id="right">
+        <img src="https://placehold.co/200/F0F/FFF" alt="">
+        <img src="https://placehold.co/200/FF/000" alt="">
+        <img src="https://placehold.co/200/0FF/FFF" alt="">
+        <img src="https://placehold.co/200/000/FFF" alt="">
+        <img src="https://placehold.co/200/FFF/000" alt="">
+        <img src="https://placehold.co/200/F0F/FFF" alt="">
+        <img src="https://placehold.co/200/FF/000" alt="">
+        <img src="https://placehold.co/200/0FF/FFF" alt="">
+        <img src="https://placehold.co/200/000/FFF" alt="">
+    </section>
+</body>
+
+</html>

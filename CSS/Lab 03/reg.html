@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="wrapper passwordweb">
+    <form action="home.html" class="form-box">
+      <h1>Sign Up</h1>
+      <div class="username">
+        <input type="text" id="username" name="username" class="input-field" placeholder="Username" required
+          autocomplete="name" minlength="6" maxlength="12">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="username">
+        <input type="email" id="email" name="email" class="input-field" placeholder="Email" required autocomplete="name"
+          minlength="6" maxlength="12">
+        <i class='bx bxs-envelope'></i>
+      </div>
+      <div class="password">
+        <input type="password" id="password" name="password" class="input-field" placeholder="Password" required
+          autocomplete="current-password" minlength="8" maxlength="20">
+        <i class='bx bxs-lock-open-alt'></i>
+      </div>
+      <div class="password">
+        <input type="password" id="password" name="password" class="input-field" placeholder="Confirm Password" required
+          autocomplete="current-password" minlength="8" maxlength="20">
+        <i class='bx bxs-lock-open-alt'></i>
+      </div>
+      <input type="submit" value="Login" class="input-field login">
+      <div class="link">have an account? <a href="index.html">Login</a></div>
+    </form>
+  </div>
+</body>
+
+</html>

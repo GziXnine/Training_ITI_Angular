@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 06</title>
+</head>
+
+<body>
+  <!--! 1. DOM Practice Tasks -->
+  <button onclick="document.body.style.backgroundColor = 'lightblue'">Change Background</button>
+
+  <p id="myPara">Original text</p>
+  <button onclick="document.getElementById('myPara').innerText = 'Text changed!'">Change Text</button>
+
+  <ul id="myList">
+    <li>Old Item</li>
+  </ul>
+  <button onclick="addListItem()">Add Item</button>
+
+  <p>Count: <span id="counter">0</span></p>
+  <button onclick="increment()">Increase</button>
+  <br><br>
+
+  <!--! 2. BOM & Window Practice Tasks -->
+  <button onclick="window.open('https://github.com/GziXnine')">Open GitHub</button>
+
+  <br><br>
+
+  <div id="clock"></div>
+
+  <!--! 3. Navigator Object Practice Tasks -->
+  <p id="browserInfo"></p>
+
+  <!--! 4. Location & History Practice Tasks -->
+  <button onclick="window.location.href = 'https://www.google.com'">Go to Google</button>
+  <br><br>
+  <button onclick="history.back()">Go Back</button>
+  <br><br>
+  <button onclick="history.forward()">Go Forward</button>
+  <br><br>
+  <!--! 5. Event Object & Event Handling Practice Tasks -->
+  <input type="text" onclick="console.log('Input clicked')">
+  <br><br>
+  <button id="hoverBtn">Hover Me</button>
+  <br><br>
+
+  <form id="myForm">
+    <input type="text">
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <br><br>
+  <div id="outerDiv" style="padding:20px; background:rgba(0, 0, 255, 0.438);">
+    <button id="innerBtn">Click Me</button>
+  </div>
+  <br><br>
+
+  <button id="toggleBtn">Click Me</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

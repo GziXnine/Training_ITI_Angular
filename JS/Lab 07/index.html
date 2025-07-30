@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 07</title>
+  <style>
+    .focused {
+      background-color: lightyellow;
+    }
+
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+
+
+<body onload="initializePage()">
+  <!--! 1. Document Object Tasks -->
+  <p>Paragraph 1</p>
+  <p id="secondPara">Paragraph 2</p>
+  <p>Paragraph 3</p>
+  <button onclick="document.body.style.backgroundColor='lightblue'">Change Background</button>
+  <br><br>
+
+  <div id="pCount"></div>
+  <br><br>
+
+  <!--! 2. Image Object Tasks -->
+  <img id="image1" src="https://placehold.co/200/00F/FFF" 
+    onmouseover="this.src='https://placehold.co/200/F00/FFF'"
+    onmouseout="this.src='https://placehold.co/200/00F/FFF'" 
+    alt="Hover Image">
+  <br>
+
+  <button onclick="document.getElementById('image1').src='https://placehold.co/200/0F0/FFF'">Change Image</button>
+  <br><br>
+
+  <!--! 3. Form Object Tasks -->
+  <form id="userForm">
+    <input type="text" name="fname" placeholder="First Name" 
+      onfocus="this.classList.add('focused')"
+      onblur="this.classList.remove('focused')"><br>
+    <input type="text" name="lname" placeholder="Last Name" 
+      onfocus="this.classList.add('focused')"
+      onblur="this.classList.remove('focused')"><br>
+
+    <button type="submit">Submit</button>
+    <button type="button" onclick="document.getElementById('userForm').reset()">Reset</button>
+  </form>
+
+  <div id="formResult"></div>
+  <br>
+
+  <!--! 4. Dropdown List Tasks -->
+  <select id="fruitSelect" class="fruit-select" 
+    style="border: 3px solid black;"
+    onfocus="this.style.border='3px solid red'" 
+    onblur="this.style.border='3px solid black'">
+  <option value="" disabled selected>Select a fruit</option>
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Orange</option>
+  </select>
+  <br>
+  <button onclick="displayFruit()">Show Selected Fruit</button>
+  <button onclick="addFruit()">Add Mango</button>
+
+  <div id="fruitResult"></div>
+  <br>
+
+  <!--! 5. Radio Button Tasks -->
+  <input type="radio" name="gender" value="Male" onclick="showGender(this.value)"> Male
+  <input type="radio" name="gender" value="Female" onclick="showGender(this.value)"> Female
+
+  <div id="genderResult"></div>
+  <button onclick="checkSelectedGender()">Check Selected Gender</button>
+  <br><br>
+  
+  <!--! 6. Checkbox Tasks -->
+  <input type="checkbox" id="selectAll" onclick="toggleAll(this)"> Select All <br>
+  <input type="checkbox" class="hobby" value="Reading" onclick="updateHobbies()"> Reading<br>
+  <input type="checkbox" class="hobby" value="Gaming" onclick="updateHobbies()"> Gaming<br>
+  <input type="checkbox" class="hobby" value="Swimming" onclick="updateHobbies()"> Swimming<br>
+
+  <div id="hobbyList"></div>
+  <br>
+  
+  <!--! 7. Button Tasks -->
+  <button onmousedown="this.style.backgroundColor='yellow'" 
+          onmouseup="this.style.backgroundColor=''">Hold Me</button>
+
+  <button onclick="disableMe(this)">Click Once</button>
+  <br><br>
+
+  <!--! 8. Using this in Events -->
+  <input type="text" 
+    onfocus="this.style.backgroundColor='lightblue'" 
+    onblur="this.style.backgroundColor=''">
+    <br><br>
+  
+  <button onclick="changeText(this)">Button 1</button>
+  <button onclick="changeText(this)">Button 2</button>
+  <button onclick="changeText(this)">Button 3</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

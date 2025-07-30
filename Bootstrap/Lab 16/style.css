@@ -1,0 +1,58 @@
+/** @format */
+
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#featuredProductsCarousel .carousel-item img {
+  border-radius: 8px;
+  object-fit: cover;
+  height: 650px;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text-price {
+  font-size: 1.1rem;
+  color: #007bff;
+}
+
+.badge-in-stock {
+  background-color: #28a745;
+  color: white;
+  padding: 0.4em 0.6em;
+  border-radius: 0.25rem;
+}
+
+.badge-out-of-stock {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.4em 0.6em;
+  border-radius: 0.25rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #0d6efd;
+  background-color: #e7f1ff;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.faa {
+  font-size: 0.9rem;
+}

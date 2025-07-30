@@ -1,0 +1,248 @@
+/** @format */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/*! --- Music Player Styles --- */
+.music-player-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.music-player {
+  width: 370px;
+  height: 650px;
+  background-color: #212121;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 0;
+  color: #e0e0e0;
+  overflow: hidden;
+  border: 6px solid black;
+  outline: 10px solid #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 10px;
+  font-size: 0.9em;
+  padding: 0 10px;
+}
+
+.signal-icons i {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  background-color: #444;
+  height: 60px;
+}
+
+.top-nav span {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.top-nav i {
+  cursor: pointer;
+}
+
+.album-art {
+  width: 160px;
+  height: 170px;
+  background-color: #555;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: #bbb;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-container {
+  width: 90%;
+  margin: 0 auto 20px auto;
+}
+
+.progress-bar {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 4px;
+  background: #666;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.progress-bar:hover {
+  opacity: 1;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin-top: 5px;
+  color: #aaa;
+}
+
+.song-details {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.song-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 550;
+}
+
+.song-details p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  color: #bbb;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  margin-bottom: 0px;
+  background-color: #444;
+  padding-top: 20px;
+  height: 70px;
+}
+
+.control-btn {
+  background-color: #444;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8em;
+  color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.control-btn:hover {
+  background-color: #555;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.play-pause-btn {
+  width: 80px;
+  height: 80px;
+  font-size: 2.5em;
+}
+
+.play-pause-btn:hover {
+  background-color: #5cb85c;
+}
+
+.volume-bar-container {
+  width: 100%;
+  text-align: center;
+  background-color: #444;
+  margin: 0 auto 20px auto;
+  padding-bottom: 30px;
+}
+
+.volume-bar {
+  width: 50%;
+  -webkit-appearance: none;
+  height: 4px;
+  background: #666;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.volume-bar:hover {
+  opacity: 1;
+}
+
+.volume-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.volume-bar::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f44336;
+  cursor: pointer;
+}
+
+.additional-info {
+  text-align: center;
+  font-size: 0.8em;
+  color: #aaa;
+  background-color: #444;
+}
+
+.bar {
+  height: 40px;
+  background-color: #444;
+  position: relative;
+  margin-top: 20px;
+}
