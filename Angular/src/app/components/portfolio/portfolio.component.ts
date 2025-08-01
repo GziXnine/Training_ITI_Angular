@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 interface iproduct {
   id: number;
@@ -97,4 +98,11 @@ export class PortfolioComponent {
       inStock: 'In Stock',
     },
   ];
+
+  constructor(private cartService: CartService) {}
+
+  addToCart(product: iproduct): void {
+    this.cartService.addToCart(product);
+    alert(`${product.name} added to cart!`);
+  }
 }

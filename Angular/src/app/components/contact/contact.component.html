@@ -1,1 +1,40 @@
-<p>contact works!</p>
+<!--! Template Driven Form -->
+<div class="container py-5" [ngStyle]="{ 'background-color': bgColorTemplateDriven }">
+  <h2>Template Driven Form</h2>
+  <form #ageForm="ngForm" (ngSubmit)="onSubmitTemplateDriven(tdForm)" class="w-50 mx-auto needs-validation" novalidate>
+
+    <div class="mb-3">
+      <label for="tdName" class="form-label">Name</label>
+      <input id="tdName" type="text" class="form-control" name="name" [(ngModel)]="formData.name" required
+        #tdName="ngModel" />
+    </div>
+
+    <div class="mb-3">
+      <label for="tdAge" class="form-label">Age</label>
+      <input id="tdAge" type="number" class="form-control" name="age" [(ngModel)]="formData.age" required
+        #tdAge="ngModel" min="0" />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100" [disabled]="ageForm.invalid">Submit</button>
+  </form>
+</div>
+
+
+<!--! Reactive Form -->
+<div class="container py-5 mt-5" [ngStyle]="{ 'background-color': bgColorReactive }">
+  <h2>Reactive Form</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmitReactive()" class="w-50 mx-auto needs-validation" novalidate>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input id="name" type="text" class="form-control" formControlName="name" />
+    </div>
+
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input id="age" type="number" class="form-control" formControlName="age" />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100" [disabled]="form.invalid">Submit</button>
+  </form>
+</div>

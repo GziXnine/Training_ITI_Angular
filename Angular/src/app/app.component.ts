@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { ServicesComponent } from './components/services/services.component';
+import { WorkComponent } from './components/work/work.component';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
@@ -14,7 +14,7 @@ import { filter } from 'rxjs/operators';
     HeaderComponent,
     FooterComponent,
     PortfolioComponent,
-    ServicesComponent,
+    WorkComponent,
     RouterOutlet,
     CommonModule,
   ],

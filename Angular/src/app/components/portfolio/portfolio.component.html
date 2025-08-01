@@ -11,8 +11,8 @@
             }}</span>
           <div class="mt-3 d-flex justify-content-between">
             <a type="button" class="btn btn-sm btn-outline-success" [routerLink]="['/details', product.id]">Details</a>
-            <button type="button" class="btn btn-sm btn-primary px-3"
-              [disabled]="product.inStock === 'Out Of Stock'">Buy</button>
+            <button type="button" class="btn btn-sm btn-primary px-3" [disabled]="product.inStock === 'Out Of Stock'"
+              (click)="addToCart(product)">Buy</button>
           </div>
         </div>
       </div>
